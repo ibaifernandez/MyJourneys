@@ -90,7 +90,7 @@ const SubscriptionPopup = ({ isOpen, onClose }) => {
                 <h2 className="popup-heading">Subscribe to Our Newsletter</h2>
                 <p className="popup-description">and enjoy the best updates on the finest journeys straight to your inbox.</p>
 
-                <form name="MyJourneysSubscriptionForm" method="post" onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field">
+                <form name="MyJourneysSubscriptionForm" method="post" onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field" noValidate>
                     <input type="hidden" name="form-name" value="MyJourneysSubscriptionForm" />
                   <div className="form-group">
                     <label htmlFor="name">Name</label>
