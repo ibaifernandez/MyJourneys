@@ -92,9 +92,6 @@ const SubscriptionPopup = ({ isOpen, onClose }) => {
 
                 <form name="MyJourneysSubscriptionForm" method="post" onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="MyJourneysSubscriptionForm" />
-                    {/* You still need to add the hidden input with the form name to your JSX form */}
-                    {/* <form name="MyJourneysSubscriptionForm" method="post" onSubmit={handleSubmit} data-netlify="true">
-                    <input type="hidden" name="form-name" value="MyJourneysSubscriptionForm" /> */}
                   <div className="form-group">
                     <label htmlFor="name">Name</label>
                     <input
