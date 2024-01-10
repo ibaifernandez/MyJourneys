@@ -149,6 +149,10 @@ header {
     color: #333;
 }
 
+.hidden-subscription-form {
+    display: none;
+}
+
 /*****************************************
 *           Navigation Menu              *
 ******************************************/

@@ -10,7 +10,7 @@ import DateTimeDisplay from './Clock.jsx'; // Importa el nuevo componente
 const Header = ({ openSubscriptionPopup, openNotificationPopup }) => {
   return (
     <header>
-        <form name="MyJourneysSubscriptionForm" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+        <form className="hidden-subscription-form" name="MyJourneysSubscriptionForm" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
             <input type="text" name="name" />
             <input type="email" name="email" />
         </form>
