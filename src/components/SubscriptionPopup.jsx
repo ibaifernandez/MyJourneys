@@ -69,12 +69,6 @@ const SubscriptionPopup = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <>
-    <form name="MyJourneysSubscriptionForm" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-    </form>
-
     <div className={`subscription-popup-overlay ${isOpen ? 'open' : ''}`}   >
       <div className={`subscription-popup ${isOpen ? 'open' : ''}`}>
         <div className="popup-content">
@@ -144,8 +138,7 @@ const SubscriptionPopup = ({ isOpen, onClose }) => {
         </div>
       </div>
     </div>
-    </>
-  );
+    );
 };
 
 export default SubscriptionPopup;
