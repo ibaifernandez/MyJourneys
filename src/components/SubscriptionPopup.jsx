@@ -90,13 +90,11 @@ const SubscriptionPopup = ({ isOpen, onClose }) => {
                 <h2 className="popup-heading">Subscribe to Our Newsletter</h2>
                 <p className="popup-description">and enjoy the best updates on the finest journeys straight to your inbox.</p>
 
-                <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-                    <input type="text" name="name" />
-                    <input type="email" name="email" />
-                    <textarea name="message"></textarea>
-                </form>
-
-                <form name="MyJourneysSubscriptionForm" method="post" onSubmit={handleSubmit} data-netlify="true" noValidate>
+                <form name="contact" method="post" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                        <p hidden=""><label>Don’t fill this out: <input name="bot-field"></label></p><p><label>Your name:<br><input type="text" name="name"><div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></label></p><p><label>Your email:<br><input type="email" name="email"></label></p><p><label>Message:<br><textarea name="message"></textarea></label></p><p><button type="submit">Send</button></p>
+                        </form>
+                {/* <form name="MyJourneysSubscriptionForm" method="post" onSubmit={handleSubmit} data-netlify="true" noValidate> */}
                 <input type="hidden" name="form-name" value="MyJourneysSubscriptionForm" />
                   <div className="form-group">
                     <label htmlFor="name">Name</label>
