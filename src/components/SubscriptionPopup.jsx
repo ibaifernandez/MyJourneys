@@ -20,26 +20,39 @@ const SubscriptionPopup = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     if (formData.name === '') {
       setValidationMessages({ ...validationMessages, name: 'Please enter your name.' });
       return;
     }
-
+  
     if (formData.email === '' || !isEmailValid(formData.email)) {
       setValidationMessages({ ...validationMessages, email: 'Please enter a valid email address.' });
       return;
     }
-
+  
+    // Añadir el campo 'form-name' al objeto formData
+    formData.append('form-name', 'MyJourneysSubscriptionForm');
+  
     console.log('The form is being sent:', formData);
-
+  
     setSubmitted(true);
     console.log("Sending...")
-
-    setTimeout(() => {
-        console.log ('The form has been submitted!');  
-    }, 1000 );
-};
+  
+    // Enviar la solicitud
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(response => {
+        // Manejar la respuesta si es necesario
+      })
+      .catch(error => {
+        // Manejar errores
+      });
+  };
+  
 
   const handleOutsideClick = (event) => {
     const popup = document.querySelector('.subscription-popup');
