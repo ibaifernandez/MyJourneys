@@ -32,9 +32,11 @@ const SubscriptionPopup = ({ isOpen, onClose }) => {
     }
   
     // Añadir el campo 'form-name' al objeto formData
-    formData.append('form-name', 'MyJourneysSubscriptionForm');
-  
-    console.log('The form is being sent:', formData);
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);  // Utilizar formData.name
+    formDataToSend.append('email', formData.email);  // Utilizar formData.email
+    formDataToSend.append('form-name', 'MyJourneysSubscriptionForm');  
+    console.log('The form is being sent:', formDataToSend);
   
     setSubmitted(true);
     console.log("Sending...")
@@ -43,7 +45,7 @@ const SubscriptionPopup = ({ isOpen, onClose }) => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
+      body: new URLSearchParams(formDataToSend).toString(),
     })
       .then(response => {
         // Manejar la respuesta si es necesario
@@ -52,6 +54,7 @@ const SubscriptionPopup = ({ isOpen, onClose }) => {
         // Manejar errores
       });
   };
+  
   
 
   const handleOutsideClick = (event) => {
