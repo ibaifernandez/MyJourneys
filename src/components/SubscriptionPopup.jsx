@@ -90,7 +90,7 @@ const SubscriptionPopup = ({ isOpen, onClose }) => {
                 <h2 className="popup-heading">Subscribe to Our Newsletter</h2>
                 <p className="popup-description">and enjoy the best updates on the finest journeys straight to your inbox.</p>
 
-                <form onSubmit={handleSubmit} noValidate>
+                <form name="MyJourneysSubscriptionForm" onSubmit={handleSubmit} netlify noValidate>
                   <div className="form-group">
                     <label htmlFor="name">Name</label>
                     <input
