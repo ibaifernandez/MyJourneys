@@ -5,14 +5,15 @@ import TWIcon from '../images/twitter-logo.svg';
 import NotificationPopup from './NotificationPopup';
 
 const Preheader = () => {
-  const [isNotificationPopupOpen, setNotificationPopupOpen] = useState(false);
+  const [isNotificationPopupOpen, setNotificationPopupOpen] = useState(false);   // Estado para controlar si el popup de notificación está abierto o cerrado
 
-  const toggleNotificationPopup = () => {
+
+  const toggleNotificationPopup = () => {   // Función para alternar entre abrir y cerrar el popup de notificación
     setNotificationPopupOpen(!isNotificationPopupOpen);
   };
 
-  const closeNotificationPopup = () => {
-    setNotificationPopupOpen(false);
+  const closeNotificationPopup = () => {  // Función para cerrar el popup de notificación
+    setNotificationPopupOpen(false); 
   };
 
   return (
@@ -25,6 +26,10 @@ const Preheader = () => {
             </div>
           </a>
           <div className="bell-icon" onClick={toggleNotificationPopup}>
+            {/* Al hacer clic sobre la campana, se invoca a la función toggleNotificationPopup (línea 11), que invierte (!) el estado de 
+            «isNotificationPopup» (inicialmente «false» —linea 8— y que, por lo tanto, pasa a «true»). Dicho estado («true») se envía al
+            componente <NotificationPopup» como la prop «isOpen», lo que activará la lógica de apertura del popup a través de la
+            adición de la clase «open» (v. componente <NotificationPopup>) */}
             <a href="#">
               <img src={Bell} alt="bell-icon" />
             </a>

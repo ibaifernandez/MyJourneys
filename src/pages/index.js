@@ -1,5 +1,3 @@
-// HomePage.js
-
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import HeroImage from '../images/cusco.svg'
@@ -24,6 +22,30 @@ const HomePage = () => {
   );
 };
 
-export const Head = () => <title>MyJourneys</title>;
+export const Head = () => (
+    <>
+      <title>MyJourneys</title>
+      <meta name="description" content="Welcome to MyJourneys' Homepage. Explore and share the most awesome journeys." />
+      <meta name="author" content="Ibai Fernández" />
+      <meta name="keywords" content="travel, adventures, exploration, homepage" />
+      <meta name="lang" content="en-US" />
+      <meta name="image" content="src/images/myjourneys-preview.jpg" />
+  
+      {/* Datos de Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      {/* <meta name="twitter:site" content="@tuusuarioTwitter" /> */}
+      <meta name="twitter:title" content="MyJourneys" />
+      <meta name="twitter:description" content="src/images/myjourneys-preview.jpg" />
+      <meta name="twitter:image" content="src/images/myjourneys-preview.jpg" />
+      <meta name="twitter:creator" content="@ibaifernandezec" />
+  
+      {/* Datos de Facebook */}
+      <meta property="og:title" content="MyJourneys" />
+      <meta property="og:description" content="src/images/myjourneys-preview.jpg" />
+      <meta property="og:image" content="src/images/myjourneys-preview.jpg" />
+      <meta property="og:url" content="https://myjourneys.ibaifernandez.com" />
+      <meta property="og:type" content="website" />
+    </>
+  );
 
 export default HomePage;
