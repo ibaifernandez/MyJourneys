@@ -1,0 +1,23 @@
+{
+    "heroArticle": {
+        "title": {
+            "text": "Cusco, the trendiest Peruvian must-go",
+            "link": "#"
+        },
+        "meta": {
+            "date": "December 5, 2023",
+            "category": {
+                "text": "Travel",
+                "link": "#"
+            }
+        },
+        "content":  "Cusco, the trendiest Peruvian must-go, beckons travelers with its irresistible charm and rich cultural tapestry. Discover the allure of this enchanting destination as it captivates the hearts of those seeking a truly unforgettable experience.",
+        "author": {
+            "name": "Ibai Fernández",
+            "link": "#"
+        },
+        "image": {
+            "alt": "Cusco, the trendiest Peruvian must-go"
+        }
+    }
+}

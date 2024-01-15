@@ -12,6 +12,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Poppins", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #222;
+}
+
 /*****************************************
 *              Pre-Header                *
 ******************************************/
@@ -468,6 +473,9 @@ main {
     gap: 20px;
     margin: 0 auto;
 }
+.top-stories-news-content {
+    height:60px;
+}
 
 .top-stories-title {
     font-size: 30px;
@@ -490,6 +498,17 @@ main {
     line-height: 26px;
     font-weight: bold;
     margin: 10px 0 5px;
+}
+
+.top-stories-image-container {
+    height:120px;
+    margin-top:40px;
+}
+.top-stories-image {
+    width:auto;
+    height: 100%;
+    max-height: fit-content;
+    min-width: 100%;
 }
 
 /**************************************************************************

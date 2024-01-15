@@ -4,6 +4,7 @@ import Preheader from './Preheader.jsx';
 import Header from './Header.jsx';
 import SubscriptionPopup from './SubscriptionPopup.jsx';
 import NotificationPopup from './NotificationPopup.jsx';
+import { useStaticQuery, graphql } from "gatsby"
 
 const Layout = ({ children }) => {
   const [isSubscriptionPopupOpen, setSubscriptionPopupOpen] = useState(false);
@@ -14,6 +15,16 @@ const Layout = ({ children }) => {
 
   const openNotificationPopup = () => setNotificationPopupOpen(true);
   const closeNotificationPopup = () => setNotificationPopupOpen(false);
+
+//   const data = useStaticQuery(graphql`
+//     query {
+//         site {
+//             siteMetadata {
+//                 title
+//             }
+//         }
+//     }
+//     `)
 
   return (
     <div>
