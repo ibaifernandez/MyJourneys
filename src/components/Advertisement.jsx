@@ -23,9 +23,9 @@ export const Advertisement = () => {
                             />
                         </div>
                         <div className="text-lines">
-                        <p class="advertisement-title">Ibai Fernández</p>
-                        <p class="advertisement-subtitle">Full-Stack Developer</p>
-                        <p class="advertisement-tagline">React · Gatsby · Wordpress · SEO</p>
+                        <p className="advertisement-title">Ibai Fernández</p>
+                        <p className="advertisement-subtitle">Full-Stack Developer</p>
+                        <p className="advertisement-tagline">React · Gatsby · Wordpress · SEO</p>
                         </div>
                     </div>
                 </div>

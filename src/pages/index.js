@@ -3,22 +3,41 @@ import Layout from '../components/Layout';
 import "../styles/styles.css"
 import Seo from '../components/Seo.jsx';
 import { HomeHero } from '../components/HomeHero.jsx';
-import { TopStories } from '../components/TopStories.jsx'
+import {TopStories} from '../components/TopStories.jsx'
 import { Advertisement } from '../components/Advertisement.jsx';
 import { EditorsPick } from '../components/EditorsPick.jsx'
+import { graphql } from 'gatsby';
 
-const HomePage = () => {
+const HomePage = ({data}) => {
+    console.log("data", data)
  
   return (
     <Layout>
         <HomeHero />
-        <TopStories />
+        <TopStories data={data}/>
         <Advertisement />
         <EditorsPick />
-        <Advertisement/>
     </Layout>
   );
 };
+
+export const query = graphql`
+query MyQuery {
+    allMdx(sort: {frontmatter: {date: ASC}}) {
+      nodes {
+        frontmatter {
+          date(formatString: "MMMM D, YYYY")
+          title
+          category
+          author
+          image
+          imageAlt
+        }
+        id
+        excerpt
+      }
+    }
+  }`
 
 export const Head = () => (
     <>
