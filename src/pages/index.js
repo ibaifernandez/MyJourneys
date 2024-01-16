@@ -4,6 +4,8 @@ import "../styles/styles.css"
 import Seo from '../components/Seo.jsx';
 import { HomeHero } from '../components/HomeHero.jsx';
 import { TopStories } from '../components/TopStories.jsx'
+import { Advertisement } from '../components/Advertisement.jsx';
+import { EditorsPick } from '../components/EditorsPick.jsx'
 
 const HomePage = () => {
  
@@ -11,6 +13,9 @@ const HomePage = () => {
     <Layout>
         <HomeHero />
         <TopStories />
+        <Advertisement />
+        <EditorsPick />
+        <Advertisement/>
     </Layout>
   );
 };

@@ -712,7 +712,7 @@ main {
 
 .editors-pick-news-container {
     border-top: 1px solid #333;
-    min-height: 665px;
+    /* min-height: 665px; */
 }
 
 .editors-pick-meta,
@@ -1036,16 +1036,9 @@ figure {
     margin: 0 auto 50px;
 }
 
+/* Estilos generales para todos los anuncios */
 .advertisement-1-article,
-.advertisement-1-homepage {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    text-align: center;
-    color: #999;
-    margin: 50px 0 0 0;
-}
-
+.advertisement-1-homepage,
 .advertisement-2 {
     font-size: 10px;
     text-transform: uppercase;
@@ -1055,6 +1048,75 @@ figure {
     margin: 50px 0 0 0;
 }
 
+.advertisement-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.advertisement-box {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 100%;
+    background-color: #000;
+    background: url("../images/ibai-fernandez-advertisement.svg") no-repeat center center;    
+}
+
+.advertisement-content {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff; 
+}
+
+/* Estilos específicos para el anuncio de Ibai Fernández */
+.advertisement-logo-container {
+    width: 60px; /* Ancho deseado */
+    height: auto; /* Altura deseada */
+    overflow: hidden; /* Para recortar la imagen que exceda el contenedor */
+}
+
+.advertisement-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Puedes usar 'cover', 'contain', 'fill', etc. según tus necesidades */
+}
+
+.text-lines {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}
+
+.advertisement-title {
+    font-size: 52px; /* Tamaño del titular */
+    font-weight: bold; /* Peso de la fuente del titular */
+    margin: 10px 0 0; /* Espaciado entre el titular y el subtitular */
+}
+
+.advertisement-subtitle {
+    font-size: 32px; /* Tamaño del subtitular */
+    font-weight: 300;
+    margin: -20px 0 -10px; /* Espaciado entre el subtitular y la tagline */
+    letter-spacing: 3.75px;
+}
+
+.advertisement-tagline {
+    font-size: 18px; /* Tamaño de la tagline */
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
+    margin-top: 10px;
+    word-spacing: 19px;
+}
+  
 /*****************************************
 *                Footer                  *
 ******************************************/
@@ -1142,6 +1204,7 @@ figure {
     flex-direction: column;
     align-items: end;
     margin-top: 10px;
+    padding:0;
 }
 
 .footer-subscribe-form input[type="email"] {
@@ -1152,6 +1215,9 @@ figure {
     background-color: transparent;
     border-bottom: 1px solid #fff;
     /* margin-right: 10px; */
+    border-radius:0px;
+    padding:0 0 10px;
+    margin-left:0;
 }
 
 .footer-subscribe-form input[type="email"]:focus-visible { 

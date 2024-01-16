@@ -1,0 +1,52 @@
+{
+    "editorsPick": [
+      {
+        "imageAlt": "Hidden Gems of Patagonia",
+        "date": "September 5, 2023",
+        "category": "Adventure",
+        "title": "Unveiling the Hidden Gems of Patagonia",
+        "author": "Elena Rodriguez"
+      },
+      {
+        "imageAlt": "Enchanting Islands of Greece",
+        "date": "September 5, 2023",
+        "category": "Explore",
+        "title": "Discovering the Enchanting Islands of Greece",
+        "author": "Carlos Martinez"
+      }
+    ],
+    "editorsPickMain": {
+        "imageAlt": "Mystical Sunset in Málaga",
+        "date": "October 12, 2023",
+        "category": "Adventure",
+        "title": "Discovering the Secrets of Málaga",
+        "author": "Ibai Fernández"
+    },
+    "latestNews": [
+      {
+        "date": "September 5, 2023",
+        "category": "Adventure",
+        "title": "Epic Road Trip: Exploring the Scenic Beauty of the Scottish Highlands",
+        "author": "Sophia Williams"
+      },
+      {
+        "date": "September 5, 2023",
+        "category": "Explore",
+        "title": "Chasing Waterfalls: A Journey through the Amazon Rainforest",
+        "author": "Miguel Fernandez"
+      },
+      {
+        "date": "September 5, 2023",
+        "category": "Adventure",
+        "title": "Safari Chronicles: Close Encounters with African Wildlife",
+        "author": "Isabella Silva"
+      },
+      {
+        "date": "September 5, 2023",
+        "category": "Explore",
+        "title": "Island Hopping in Southeast Asia: A Backpacker's Paradise",
+        "author": "Liam O'Connor"
+      }
+    ]
+  }
+  

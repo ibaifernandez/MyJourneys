@@ -4,7 +4,8 @@ import Preheader from './Preheader.jsx';
 import Header from './Header.jsx';
 import SubscriptionPopup from './SubscriptionPopup.jsx';
 import NotificationPopup from './NotificationPopup.jsx';
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
+import Footer from './Footer.jsx';
 
 const Layout = ({ children }) => {
   const [isSubscriptionPopupOpen, setSubscriptionPopupOpen] = useState(false);
@@ -34,6 +35,7 @@ const Layout = ({ children }) => {
         openNotificationPopup={openNotificationPopup}
       />
       {children}
+      <Footer />
       <SubscriptionPopup isOpen={isSubscriptionPopupOpen} onClose={closeSubscriptionPopup} />
       <NotificationPopup isOpen={isNotificationPopupOpen} onClose={closeNotificationPopup} />
     </div>

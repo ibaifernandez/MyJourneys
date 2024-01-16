@@ -5,7 +5,8 @@ import heroArticleData from '../data/hero-article.json'
 
 export const HomeHero = () => {
 
-    return (<section className="hero">
+    return (
+    <section className="hero">
         <StaticImage
             className="hero-img"
             src="../images/cusco.svg"
