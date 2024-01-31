@@ -9,8 +9,7 @@ import { EditorsPick } from '../components/EditorsPick.jsx'
 import { graphql } from 'gatsby';
 
 const HomePage = ({data}) => {
-    console.log("data", data)
- 
+    console.log(data)
   return (
     <Layout>
         <HomeHero />
@@ -23,7 +22,7 @@ const HomePage = ({data}) => {
 
 export const query = graphql`
 query MyQuery {
-    allMdx(sort: {frontmatter: {date: ASC}}) {
+    allMdx(sort: {frontmatter: {date: DESC}}) {
       nodes {
         frontmatter {
           date(formatString: "MMMM D, YYYY")
@@ -32,6 +31,7 @@ query MyQuery {
           author
           image
           imageAlt
+          slug
         }
         id
         excerpt

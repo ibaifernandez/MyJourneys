@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import topStoriesData from '../data/top-stories.json';
-
-
 
 export const TopStories = ({data}) => {
-    console.log("data", data)
+    console.log("Data at Top Stories", data)
   return (
     <section className="top-stories">
       <h3 className="top-stories-title">Top Stories</h3>
@@ -19,13 +16,13 @@ export const TopStories = ({data}) => {
               <span className="category"><Link to="#">{node.frontmatter.category}</Link></span>
             </div>
             <div className="top-stories-news-content">
-              <Link to="#">
+            <Link to={`blog/${node.frontmatter.slug}`}>
                 <h4 className="top-stories-news-title">{node.frontmatter.title}</h4>
               </Link>
               <p className="author">by <strong><Link to="#">{node.frontmatter.author}</Link></strong></p>
             </div>
             <div className="top-stories-image-container">
-              <Link to={node.frontmatter.link}>
+            <Link to={`blog/${node.frontmatter.slug}`}>
                 {index === 0 && <StaticImage className="top-stories-image" src="../images/northern-lights-iceland.jpeg" alt={node.frontmatter.imageAlt} />}
                 {index === 1 && <StaticImage className="top-stories-image" src="../images/silicon-valley.jpeg" alt={node.frontmatter.imageAlt} />}
                 {index === 2 && <StaticImage className="top-stories-image" src="../images/tuscany-gastronomy.jpeg" alt={node.frontmatter.imageAlt} />}

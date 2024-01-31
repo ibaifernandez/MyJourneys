@@ -13,32 +13,45 @@ module.exports = {
       },
     },
     plugins: [
-        'gatsby-plugin-react-helmet',
-        'gatsby-transformer-sharp',
-        'gatsby-plugin-sharp',
-        'gatsby-plugin-image',
-        {
-          resolve: 'gatsby-source-filesystem',
-          options: {
-            name: 'images',
-            path: `${__dirname}/src/images/`,
-          },
+      'gatsby-plugin-react-helmet',
+      'gatsby-transformer-sharp',
+      'gatsby-plugin-sharp',
+      {
+        resolve: 'gatsby-source-filesystem',
+        options: {
+          name: 'images',
+          path: `${__dirname}/src/images/`,
         },
-        {
-          resolve: 'gatsby-source-filesystem',
-          options: {
-            name: 'blog',
-            path: `${__dirname}/blog/`,
-          },
+      },
+      'gatsby-plugin-image',
+      {
+        resolve: 'gatsby-source-filesystem',
+        options: {
+          name: 'blog',
+          path: `${__dirname}/blog/`,
         },
-        "gatsby-plugin-mdx",
-        {
-          resolve: `gatsby-plugin-sitemap`,
-          options: {
-            output: `/sitemap.xml`,
-            // exclude: ['/exclude-page-1', '/exclude-page-2'],
-          },
+      },
+      {
+        resolve: 'gatsby-plugin-mdx',
+        options: {
+          gatsbyRemarkPlugins: [
+            {
+              resolve: 'gatsby-remark-images',
+              options: {
+                maxWidth: 800,
+              },
+            },
+          ],
         },
-        // ... Otros plugins pueden ir aquí
-      ],
-    };
+      },
+      {
+        resolve: `gatsby-plugin-sitemap`,
+        options: {
+          output: `/sitemap.xml`,
+          // exclude: ['/exclude-page-1', '/exclude-page-2'],
+        },
+      },
+      // ... Otros plugins pueden ir aquí
+    ],
+  };
+  
